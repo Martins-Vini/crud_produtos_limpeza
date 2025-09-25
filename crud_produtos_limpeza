@@ -1,0 +1,1197 @@
+{
+	"info": {
+		"_postman_id": "de6fa9e2-b2df-4684-9a37-9e4e948858c9",
+		"name": "trabalho_sw_18-09-25",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43598046",
+		"_collection_link": "https://blue-equinox-2879670.postman.co/workspace/Vin%C3%ADcius-Martins's-Workspace~09cb63fb-e0d2-42ba-87d4-f5250a5aae55/collection/43598046-de6fa9e2-b2df-4684-9a37-9e4e948858c9?action=share&source=collection_link&creator=43598046"
+	},
+	"item": [
+		{
+			"name": "consultas",
+			"item": [
+				{
+					"name": "consulta_categoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"categoria"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "consulta_cliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta_endereco",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/endereco",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta_item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/item",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta_pedido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta_produto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta_status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/status",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar_categoria_especifica",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/categoria/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"categoria",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar_cliente_especifico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/cliente/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"cliente",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar_endereco_especifico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/endereco/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"endereco",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar_item_especifico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/item/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"item",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consultar_pedido_especifico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/pedido/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"pedido",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta_status_especifico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/status/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"status",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consulta_produto_especifico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/produto/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"produto",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inserts",
+			"item": [
+				{
+					"name": "inserir_categoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":6,\n\t\"nome\": \"Removedor de manchas de carro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"categoria"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "inserir_cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\":11,\r\n    \"telefone\":\"11999909\",\r\n    \"nome\": \"Eve\",\r\n    \"limite\": 7,\r\n    \"id_endereco\": 1,\r\n    \"id_status\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert_item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 31,\r\n        \"id_pedido\": 1,\r\n        \"id_produto\": 1,\r\n        \"qnt\": 6\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/item",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir_endereco",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 11,\r\n    \"logradouro\": \"Rua das Névoas\",\r\n    \"cep\": \"01234967\",\r\n    \"numero\": 123,\r\n    \"bairro\": \"Santa Etelvina\",\r\n    \"cidade\": \"São Paulo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/endereco",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert_pedido",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"numero\": 31,\r\n        \"data_elaboracao\": \"20251109\",\r\n        \"cliente_id\": 4\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert_produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\"codigo\": 11,\r\n        \"nome\": \"Produto aleatório de limpeza\",\r\n        \"id_categoria\": 4,\r\n        \"preco\": 999.00}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir_status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 4,\r\n        \"nome\": \"péssimo\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/status",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "deletes",
+			"item": [
+				{
+					"name": "deletar_categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/categoria/5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"categoria",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar_cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/cliente/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"cliente",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar_endereco",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/endereco/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"endereco",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar_item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar_produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/produto/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"produto",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar_pedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/pedido/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"pedido",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletar_status",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/status/3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"status",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "patchs",
+			"item": [
+				{
+					"name": "editar_endereco_especifico",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"campo\":\"bairro\",\r\n    \"valor\":\"Cidade Tiradentes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/endereco",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_categoria-especifica",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"campo\":\"nome\",\r\n    \"valor\":\"Categoria inventada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_produto_especifico",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\":3,\r\n    \"campo\":\"preco\",\r\n    \"valor\":20.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_cliente_especifico",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\":5,\r\n    \"campo\":\"nome\",\r\n    \"valor\":\"Rogério\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_pedido_especifico",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"campo\":\"data_elaboracao\",\r\n    \"valor\":\"20251108\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_item_especifico",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"campo\":\"qnt\",\r\n    \"valor\":\"27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/item",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_status_especifico",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"campo\":\"nome\",\r\n    \"valor\":\"Abaixo da média\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/status",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "puts",
+			"item": [
+				{
+					"name": "editar_categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 2,\r\n        \"nome\": \"Ype sabão em pó\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"id_pedido\": 5,\r\n        \"id_produto\": 4,\r\n        \"qnt\": 20\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/item",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"codigo\": 2,\r\n        \"telefone\": \"11998575868\",\r\n        \"nome\": \"Robertson\",\r\n        \"limite\": 10000,\r\n        \"id_endereco\": 4,\r\n        \"id_status\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/cliente",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_pedido",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"numero\": 2,\r\n        \"data_elaboracao\": \"20250926\",\r\n        \"cliente_id\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_endereco",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 2,\r\n        \"logradouro\": \"Rua das Palmeiras\",\r\n        \"cep\": \"01311987\",\r\n        \"numero\": 2000,\r\n        \"bairro\": \"Cidade Tiradentes\",\r\n        \"cidade\": \"São Paulo\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/endereco",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_produto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"codigo\": 2,\r\n        \"nome\": \"Amaciante OMO\",\r\n        \"id_categoria\": 4,\r\n        \"preco\": 12.00\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar_status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"mediocre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/firma/1.0.0/status",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"firma",
+								"1.0.0",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://template.postman-echo.com"
+		}
+	]
+}
